@@ -1,0 +1,148 @@
+/* Header Styling */
+.header {
+   background-color: white;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   padding: 15px 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+}
+
+.flex {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+   font-size: 24px;
+   font-weight: bold;
+   text-decoration: none;
+   color: black;
+}
+.logo span {
+   color: purple;
+}
+
+/* Navbar */
+.navbar {
+   display: flex;
+   gap: 20px;
+}
+.navbar a {
+   text-decoration: none;
+   color: black;
+   font-weight: 600;
+}
+
+/* Profile Dropdown */
+.profile-container {
+   position: relative;
+}
+#profile-icon {
+   font-size: 24px;
+   cursor: pointer;
+}
+.account-box {
+   display: none;
+   position: absolute;
+   right: 0;
+   top: 40px;
+   background: #f9f9f9;
+   padding: 10px;
+   border-radius: 8px;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+   width: 200px;
+}
+.account-box p {
+   margin: 0;
+   font-size: 14px;
+}
+.logout-btn {
+   display: inline-block;
+   margin-top: 5px;
+   padding: 5px 10px;
+   background: red;
+   color: white;
+   text-decoration: none;
+   border-radius: 5px;
+}
+
+/* Mobile Menu */
+#menu-btn {
+   display: none; /* Default hide */
+   font-size: 24px;
+   cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+   .navbar {
+       display: none;
+       flex-direction: column;
+       position: absolute;
+       top: 60px;
+       left: 0;
+       width: 100%;
+       background: white;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+       padding: 10px 0;
+   }
+   .navbar.active {
+       display: flex;
+   }
+   .navbar a {
+       padding: 10px;
+       text-align: center;
+       width: 100%;
+       display: block;
+   }
+   #menu-btn {
+       display: block; /* Show in mobile view */
+   }
+}
+
+/* Profile Dropdown Show */
+.account-box.show {
+   display: block !important;
+}
+
+
+
+.messages .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 30rem);
+   justify-content: center;
+   gap:1.5rem;
+   max-width: 1200px;
+   margin:0 auto;
+   align-items: flex-start;
+}
+
+.messages .box-container .box {
+   background-color: var(--white);
+   padding:2rem;
+   border:var(--border);
+   box-shadow: var(--box-shadow);
+   border-radius: .5rem;
+
+}
+
+.messages .box-container .box p{
+
+   padding-bottom: 1.5rem;
+   font-size: 2rem;
+   color:var(--light-color);
+      
+line-height: 1.5;
+
+}
+
+.messages .box-container .box p span{
+
+color:var(--purple);
+
+}
